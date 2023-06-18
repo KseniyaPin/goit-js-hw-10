@@ -75,7 +75,7 @@ function fetchCatByBreed(evt) {
 
 function createMarkupBreed(objImgResponse) {
   catInfo.classList.remove('is-hidden');
-  return `<img src="${objImgResponse.url}" alt="${objImgResponse.breeds[0].name}" width="400px" class="imgStyle"><div class="styleInfo"><h2>${objImgResponse.breeds[0].name}</h2> <p>${objImgResponse.breeds[0].description} </p><h3>Temperament:</h3><p>${objImgResponse.breeds[0].temperament} </p></div>`;
+  return `<img src="${objImgResponse.url}" alt="${objImgResponse.breeds[0].name}" width="400px" class="imgStyle"><div class="styleInfo"><h2>${objImgResponse.breeds[0].name}</h2> <p> ${objImgResponse.breeds[0].description} </p><h3>Temperament:</h3><p>${objImgResponse.breeds[0].temperament} </p></div>`;
 }
 // ==----------------------------------------------------
 function noMessageLoader() {
