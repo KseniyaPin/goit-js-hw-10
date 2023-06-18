@@ -1,5 +1,3 @@
-// import { fetchBreeds, fetchCatByBreed } from './cat-api';
-
 import SlimSelect from 'slim-select';
 import Notiflix from 'notiflix';
 
@@ -16,7 +14,7 @@ const messageError = document.querySelector('.error');
 breedSelect.classList.add('is-hidden');
 noMessageError();
 
-//----- export--------------------------------
+//------------------------------------
 
 function fetchBreeds() {
   addMessageLoader();
@@ -54,7 +52,6 @@ new SlimSelect({
 breedSelect.addEventListener('change', fetchCatByBreed);
 
 // Пользователь делает выбор в селекте
-//----- export--------------------------------
 
 function fetchCatByBreed(evt) {
   console.log('Changed to: ' + evt.target.value);
