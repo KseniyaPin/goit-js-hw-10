@@ -1,0 +1,105 @@
+.is-hidden {
+  display: none;
+}
+
+body {
+  background-color: rgb(253, 255, 204);
+}
+
+.breed-select {
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 4px 4px;
+  width: 200px;
+  height: 32px;
+  border-radius: 7px;
+  border: 1px solid rgb(3, 205, 227);
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  box-shadow: 0px 4px 4px rgba(146, 250, 255, 0.436);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.cat-info {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+
+.styleInfo {
+  display: block;
+  margin-left: 100px;
+  margin-right: 2px;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: rgb(0, 57, 71);
+}
+
+.imgStyle {
+  border-radius: 7px;
+  border: 1px solid rgb(3, 205, 227);
+}
+
+/* Загручик */
+
+.loader {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  /* position: relative; */
+  animation: rotate 1s linear infinite;
+}
+.loader::before,
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #ffeca5;
+  animation: prixClipFix 2s linear infinite;
+}
+.loader::after {
+  transform: rotate3d(90, 90, 0, 180deg);
+  border-color: #00cfde;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  75%,
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+}
